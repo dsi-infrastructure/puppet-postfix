@@ -3,7 +3,7 @@
 ## Installation du module
 
 Dans le répertoire '/etc/puppet/modules', lancez les commandes suivantes :
-```
+```bash
 $ mkdir postfix
 $ cd postfix
 $ git clone https://github.com/sipf-infrastructure/postfix.git .
@@ -12,11 +12,12 @@ $ git clone https://github.com/sipf-infrastructure/postfix.git .
 ## Utilisation
 
 Dans le fichier '/etc/puppet/manifests/site.pp', on définit ce qui suit :
-```
+```ruby
 node default {
   class { 'postfix':
     mail_domain = 'example.com',
   }
 }
 ```
+Le paramètre **mail_domain** fait référence au nom de domaine de l'hôte (fqdn) ou au domaine à une zone.
 
