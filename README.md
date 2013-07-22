@@ -1,14 +1,12 @@
-# Postix [![Build Status](https://travis-ci.org/sipf-infrastructure/postfix.png?branch=master)](https://travis-ci.org/sipf-infrastructure/postfix)
+# Postfix [![Build Status](https://travis-ci.org/sipf-infrastructure/postfix.png?branch=master)](https://travis-ci.org/sipf-infrastructure/postfix)
 
 ## Installation du module
 
 Dans le répertoire '/etc/puppet/modules', lancez les commandes suivantes :
-
 ```
 $ mkdir postfix
 $ cd postfix
 $ git clone https://github.com/sipf-infrastructure/postfix.git .
-
 ```
 
 ## Utilisation
