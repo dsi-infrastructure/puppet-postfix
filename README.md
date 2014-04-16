@@ -1,23 +1,11 @@
-# Postfix [![Build Status](https://travis-ci.org/sipf-infrastructure/postfix.png?branch=master)](https://travis-ci.org/sipf-infrastructure/postfix)
+## Utilisation du module
 
-## Installation du module
+* Ce module utilise les "hiera", veuillez créer un répertoire "postfix" dans le dossier hieradata.
+* Dans ce nouveau répertoire veuillez créer un fichier portant le nom suivant : srv1.dev.yaml
+* Ce fichier doit contenir ce qui suit :
 
-Dans le répertoire '/etc/puppet/modules', lancez les commandes suivantes :
-```bash
-$ mkdir postfix
-$ cd postfix
-$ git clone https://github.com/sipf-infrastructure/postfix.git .
 ```
-
-## Utilisation
-
-Dans le fichier '/etc/puppet/manifests/site.pp', on définit ce qui suit :
-```ruby
-node default {
-  class { 'postfix':
-    mail_domain = 'example.com',
-  }
-}
+---
+postfix::mail_domain : 'example.com'
 ```
-Le paramètre **mail_domain** fait référence au nom de domaine de l'hôte (fqdn) ou au domaine à une zone.
-
+Remarque : ce paramètre fixe le domaine de messagerie utilisé par le serveur pour envoyer des messages.
